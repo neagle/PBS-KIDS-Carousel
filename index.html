@@ -1,0 +1,439 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="noindex, nofollow">
+
+<title>PBS KIDS Carousel</title>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="jquery.kidscarousel.0.1.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	// var renameNavButtons = new Array('<img src="images/control_rewind.png">', '<img src="images/control_fastforward.png">');
+	
+	/* The variables listed here are the defaults, in order to show all possible options */
+	$('#myCarousel1').kidsCarousel({
+		autoAdvance: true,
+		delay: 7000,
+		navigation: true,
+		panel: 'div',
+		panelNav: true,
+		panelNavType: 'title',
+		panelTitle: 'h4',
+		randomStart: true,
+		relativeNav: true,
+		relativeNavButtons: ['<img src="images/control_rewind.png">', '<img src="images/control_fastforward.png">'],
+		relativeNavCustomButtons: ['.myCustomBackButton', '.myCustomForwardButton']
+	});
+	
+	/* The only options you need to specify are those that are different than the defaults */
+	
+	
+	$('#myCarousel2').kidsCarousel({
+		'autoAdvance' : false,
+		'panelNavType' : 'number',
+		'relativeNav' : false
+	});
+	
+	$('#myCarousel3').kidsCarousel({
+		'autoAdvance' : false,
+		'panelNav' : false
+	});	
+	
+});
+</script>
+
+<link href="stylesheets/pbskids.carousel.css"  rel="stylesheet" type="text/css" media="screen,projection" />
+
+</head>
+
+<body>
+
+<div id="carouselDocumentation">
+
+<h1>PBS KIDS Carousel</h1>
+
+<p>The KIDS Carousel is a simple, lightweight feature rotator plugin for jQuery.</p>
+
+<ul>
+	<li><a href="#demos">Demos</a></li>
+	<li><a href="#download">Download</a></li>
+	<li><a href="#whatitdoes">What it Does</a></li>
+	<li><a href="#usage">Usage</a>
+		<ul>
+			<li><a href="#includes">Includes</a></li>
+			<li><a href="#markup">Markup</a></li>
+			<li><a href="#css">CSS</a></li>
+			<li><a href="#customization">Customization</a></li>
+		</ul>
+	</li>
+</ul>
+
+<h2 id="demos">Demos</h2>
+
+<p><a href="" class="myCustomBackButton">Go Back</a> | <a href="" class="myCustomForwardButton">Go Forward</a> </p>
+
+<div id="myCarousel1">
+		
+	<div>
+
+		<h4 title="Option 1"><a href="#">Lorem Ipsum</a></h4>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	
+	</div>
+	
+	<div>
+
+		<h4><a href="#">Sit Dolor</a></h4>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis lacus sed enim rutrum fringilla. Maecenas euismod purus arcu, aliquam ultricies mauris. Phasellus scelerisque, urna sit amet tincidunt ornare, sem elit aliquam nibh, ut malesuada tellus sapien at lectus. Cras rhoncus porta urna, et malesuada neque vestibulum a. Nunc at orci eros. Mauris molestie, nisl ut elementum cursus, lorem enim scelerisque ligula, non rhoncus augue arcu id massa. Aliquam imperdiet odio sit amet metus condimentum ut aliquet lacus mattis. Donec nec facilisis nunc.</p>
+	
+	</div>
+
+	<div>
+
+		<h4><a href="#">Amat Mi</a></h4>
+		
+		<p>Phasellus dictum tempus purus non vulputate. Maecenas commodo luctus nulla, bibendum faucibus magna tristique nec. Curabitur metus quam, eleifend ut molestie id, pulvinar id erat. Mauris aliquet vestibulum rutrum. Maecenas ultricies, sapien ac porta congue, augue lorem imperdiet elit, ut sollicitudin est quam ut felis. Vivamus interdum urna eu turpis facilisis ultrices interdum mauris interdum. Vestibulum sed leo sed nisl vestibulum commodo ut a libero.</p>
+	
+	</div>
+	
+	<div>
+
+		<h4><a href="#">Este Sum</a></h4>
+		
+		<p>Integer leo augue, malesuada eget tincidunt at, cursus sit amet lacus. Phasellus ultrices ligula eu est convallis in condimentum tortor dictum. Nulla fermentum ipsum nec mi lobortis aliquam.</p>
+	
+	</div>
+	
+	<div>
+
+		<h4><a href="#">Final Div</a></h4>
+		
+		<p>Phasellus id ante faucibus risus aliquam ornare ac in est. Integer et libero neque. Nunc dignissim ultricies quam, eget sodales nisi accumsan in. Aenean volutpat, nibh non egestas suscipit, dolor nisi lobortis enim, sit amet congue dolor nisi eget eros. Vestibulum imperdiet convallis molestie. Cras eu turpis sit amet metus fermentum mollis at ac libero. Nulla facilisi. Nulla facilisi.</p>
+	
+	</div>
+
+</div><!-- #myCarousel -->
+
+<div id="myCarousel2">
+		
+	<div>
+
+		<h4><a href="#">Lorem Ipsum</a></h4>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	
+	</div>
+	
+	<div>
+
+		<h4><a href="#">Sit Dolor</a></h4>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis lacus sed enim rutrum fringilla. Maecenas euismod purus arcu, aliquam ultricies mauris. Phasellus scelerisque, urna sit amet tincidunt ornare, sem elit aliquam nibh, ut malesuada tellus sapien at lectus. Cras rhoncus porta urna, et malesuada neque vestibulum a. Nunc at orci eros. Mauris molestie, nisl ut elementum cursus, lorem enim scelerisque ligula, non rhoncus augue arcu id massa. Aliquam imperdiet odio sit amet metus condimentum ut aliquet lacus mattis. Donec nec facilisis nunc.</p>
+	
+	</div>
+
+	<div>
+
+		<h4><a href="#">Amat Mi</a></h4>
+		
+		<p>Phasellus dictum tempus purus non vulputate. Maecenas commodo luctus nulla, bibendum faucibus magna tristique nec. Curabitur metus quam, eleifend ut molestie id, pulvinar id erat. Mauris aliquet vestibulum rutrum. Maecenas ultricies, sapien ac porta congue, augue lorem imperdiet elit, ut sollicitudin est quam ut felis. Vivamus interdum urna eu turpis facilisis ultrices interdum mauris interdum. Vestibulum sed leo sed nisl vestibulum commodo ut a libero.</p>
+	
+	</div>
+	
+	<div>
+
+		<h4><a href="#">Este Sum</a></h4>
+		
+		<p>Integer leo augue, malesuada eget tincidunt at, cursus sit amet lacus. Phasellus ultrices ligula eu est convallis in condimentum tortor dictum. Nulla fermentum ipsum nec mi lobortis aliquam.</p>
+	
+	</div>
+	
+	<div>
+
+		<h4><a href="#">Final Div</a></h4>
+		
+		<p>Phasellus id ante faucibus risus aliquam ornare ac in est. Integer et libero neque. Nunc dignissim ultricies quam, eget sodales nisi accumsan in. Aenean volutpat, nibh non egestas suscipit, dolor nisi lobortis enim, sit amet congue dolor nisi eget eros. Vestibulum imperdiet convallis molestie. Cras eu turpis sit amet metus fermentum mollis at ac libero. Nulla facilisi. Nulla facilisi.</p>
+	
+	</div>
+
+</div><!-- #myCarousel -->
+
+<div id="myCarousel3">
+		
+	<div>
+
+		<h4><a href="#">Lorem Ipsum</a></h4>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	
+	</div>
+	
+	<div>
+
+		<h4><a href="#">Sit Dolor</a></h4>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis lacus sed enim rutrum fringilla. Maecenas euismod purus arcu, aliquam ultricies mauris. Phasellus scelerisque, urna sit amet tincidunt ornare, sem elit aliquam nibh, ut malesuada tellus sapien at lectus. Cras rhoncus porta urna, et malesuada neque vestibulum a. Nunc at orci eros. Mauris molestie, nisl ut elementum cursus, lorem enim scelerisque ligula, non rhoncus augue arcu id massa. Aliquam imperdiet odio sit amet metus condimentum ut aliquet lacus mattis. Donec nec facilisis nunc.</p>
+	
+	</div>
+
+	<div>
+
+		<h4><a href="#">Amat Mi</a></h4>
+		
+		<p>Phasellus dictum tempus purus non vulputate. Maecenas commodo luctus nulla, bibendum faucibus magna tristique nec. Curabitur metus quam, eleifend ut molestie id, pulvinar id erat. Mauris aliquet vestibulum rutrum. Maecenas ultricies, sapien ac porta congue, augue lorem imperdiet elit, ut sollicitudin est quam ut felis. Vivamus interdum urna eu turpis facilisis ultrices interdum mauris interdum. Vestibulum sed leo sed nisl vestibulum commodo ut a libero.</p>
+	
+	</div>
+	
+	<div>
+
+		<h4><a href="#">Este Sum</a></h4>
+		
+		<p>Integer leo augue, malesuada eget tincidunt at, cursus sit amet lacus. Phasellus ultrices ligula eu est convallis in condimentum tortor dictum. Nulla fermentum ipsum nec mi lobortis aliquam.</p>
+	
+	</div>
+	
+	<div>
+
+		<h4><a href="#">Final Div</a></h4>
+		
+		<p>Phasellus id ante faucibus risus aliquam ornare ac in est. Integer et libero neque. Nunc dignissim ultricies quam, eget sodales nisi accumsan in. Aenean volutpat, nibh non egestas suscipit, dolor nisi lobortis enim, sit amet congue dolor nisi eget eros. Vestibulum imperdiet convallis molestie. Cras eu turpis sit amet metus fermentum mollis at ac libero. Nulla facilisi. Nulla facilisi.</p>
+	
+	</div>
+
+</div><!-- #myCarousel -->
+
+
+<h2 id="download">Download</h2>
+
+<p>Grab the script:</p>
+
+<ul>
+	<li><a href="/includes/javascript/jquery.kidscarousel.js">jquery.kidscarousel.js</a> (uncompressed, 12kb)</li>
+	<li><a href="/includes/javascript/jquery.kidscarousel.min.js">jquery.kidscarousel.min.js</a> (minified, 8kb)</li>
+</ul>
+	
+
+<h2 id="whatitdoes">What It Does</h2>
+
+<p>The PBS KIDS Carousel turns a set of div panels into a rotating carousel that can be used for features, images, or anything else on a webpage. It gracefully degrades if the user does not have javascript enabled. (Try it!) It sets its own height based on the tallest panel in your list. It also dynamically generates a navigation bar with the titles of your panels as links. The time delay between rotation is customizable. By default, it begins with a random panel from your list, but you can set it to always begin with the first panel.</p>
+
+<p>The Carousel requires jQuery.</p>
+
+<p>Some things that make kidsCarousel special:</p>
+
+<ul>
+	<li>It does a circular rotation, by which I mean that if you keep going right past the end of the strip, it navigates smoothly to the first item in the strip as if it were a circular loop, rather than speeding back to the beginning.</li>
+	<li>It has a flexible system for titling the panel navigation. It grabs a title dynamically from within the panel, and you can even add a title attribute to those elements so that the nav title is shorter than the heading actually displayed in the panel.</li>
+	<li>It tries to be very, very flexible to the CSS you have in place. Your panels don&rsquo;t have to be the same height, for instance.</li>
+	<li>At 8k, minified, it&rsquo;s pretty lightweight.</li>
+	<li>It was made by me.</li>
+</ul>
+
+<p>There are some pretty outstanding alternatives out there if this doesn&rsquo;t meet your needs.</p>
+
+<ul>
+	<li><a href="http://sorgalla.com/projects/jcarousel/">jCarousel</a>: super bad-ass, super robust</li>
+	<li><a href="http://www.gimiti.com/kltan/wordpress/?p=46">jFlow</a>: at 2kb minified, this is as lightweight as it gets</li>
+</ul>
+
+<p>I&rsquo;m happy to add to this list if others have recommendations.</p>
+	
+<h2 id="usage">Usage</h2>
+
+<h3 id="includes">Includes</h3>
+
+<ol type="1">
+	<li>
+		<p>Include jQuery in the &lt;head&gt; section of your page:</p>
+		
+		<blockquote><code>
+			&lt;script type="text/javascript" src="http://ajax.googleapis.com/<br />ajax/libs/jquery/1.3.2/jquery.min.js"&gt;&lt;/script&gt;
+		</code></blockquote>
+		
+	</li>
+	
+	<li>
+		<p>Include the kidsCarousel plugin after including jQuery in the &lt;head&gt; section of your page:</p>
+		
+		<blockquote><code>
+			&lt;script type="text/javascript" src="/includes/javascript/jquery.kidscarousel.js"&gt;&lt;/script&gt;
+		</code></blockquote>
+		
+		<p>If you&rsquo;re working on the PBS KIDS site, that&rsquo;s all you need. If you&rsquo;re using this elsewhere, please <a href="#download">grab the script</a> and host it on your own site, changing the directory of the include accordingly.</p>
+	</li>
+</ol>
+
+<h3 id="markup">Markup</h3>
+
+<p>All the Carousel script needs is an element with a series of divs inside it to serve as panels.</p>
+
+<blockquote><code>
+	&lt;div id="myCarousel"&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;-- Panel 1 --&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Panel Title&lt;/h4&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Panel contents. Can be anything.&lt;/p&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;-- Panel 2 --&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Panel Title&lt;/h4&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Panel contents. Can be anything.&lt;/p&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;-- Panel 3 --&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Panel Title&lt;/h4&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Panel contents. Can be anything.&lt;/p&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;-- Panel 4 --&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Panel Title&lt;/h4&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Panel contents. Can be anything.&lt;/p&gt;<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+	&lt;/div&gt;
+</code></blockquote>
+
+<h3 id="initialization">Initialization</h3>
+
+<p>The carousel needs to be initiated by running the kidsCarousel function. The simplest way is to put the following script after the other javascript includes in your &lt;head&gt;.</p>
+
+<blockquote><code>
+&lt;script type="text/javascript"&gt;<br />
+$(document).ready(function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;$('#myCarousel').kidsCarousel();<br />
+});<br />
+&lt;/script&gt;
+</code></blockquote>
+
+<p>The $(document).ready function intializes the script once the DOM is ready to be manipulated. The $('') selector uses CSS-style selection to target the appropriate element. You should substitute this with the #id of your own element.</p>
+
+<h3 id="css">CSS</h3>
+
+<p>The Carousel does not have any essential CSS, but you will want to add some styling for the navigation bar at the very least. This is the CSS used in the demo:</p>
+
+<blockquote><code>
+/* Each div inside your carousel is given a panel class that can be used for styling */<br />
+#myCarousel .panel h4 { margin: 0 0 1em; }<br />
+<br />
+/* Styling for navigation bar */<br />
+.kidsCarouselNavigation {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;background: #333;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;font-family: Verdana, Geneva, sans-serif;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;font-size: 10px;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;margin: 10px 0 0;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br />
+}<br />
+<br />
+/* Styling for navigation bar links */<br />
+.kidsCarouselNavigation a {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;color: #fff;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;outline: none;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;padding: 5px;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;text-decoration: none;<br />
+}<br />
+<br />
+/* Styling for the back and forward buttons */<br />
+.kidsCarouselNavigation .back { }<br />
+.kidsCarouselNavigation .forward { float: right !important; }<br />
+<br />
+/* Styling for the navigation link that is currently displayed */<br />
+.kidsCarouselNavigation a.current { background: #666; }<br />
+</code></blockquote> 
+
+<h3 id="customization">Customization</h3>
+
+<p>There are a number of behaviors that can be customized. You can insert options by adding this to your initialization:</p>
+
+<blockquote><code>
+&lt;script type="text/javascript"&gt;<br />
+$(document).ready(function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;$('#myCarousel').kidsCarousel({<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'delay' : 10000,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'randomStart' : false,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'relativeNavButtons' : ['Previous', 'Next']<br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+});<br />
+&lt;/script&gt;
+</code></blockquote>
+
+<p>Options may be added in any order, and only those that you wish to change from the defaults need be added.</p>
+
+<p>These are the options available, with the default option listed in bold:</p>
+
+<ul>
+	<li>
+		<p>autoAdvance: <strong>true</strong> / false<br />
+		<em>Controls whether the carousel rotates automatically (advances one to the right).</em></p>
+	</li>
+	
+	<li>
+		<p>delay: <strong>7000</strong><br />
+		<em>The length of the delay before automatically advancing. 1000 equals roughly one second.</em></p>
+	</li>
+	
+	<li>
+		<p>navigation: <strong>true</strong> / false<br />
+		<em>Turns the panel navigation on or off.</em></p>
+	</li>
+	
+	<li>
+		<p>panel: <strong>'div'</strong> / 'any class or tag'<br />
+		<em>By default, the script looks for divs that are immediate children of the your carousel, but you can tell it to look for any element you want: list items, paragraphs, or what you will.</em></p>
+	</li>
+	
+	<li>
+		<p>panelNav: <strong>true</strong> / false<br />
+		<em>Turns on or off the panel navigation that displays between the back and forward buttons.</em></p>
+	</li>
+	
+	<li>
+		<p>panelNavType: <strong>'title'</strong> / 'number'
+		<em>By default, the carousel gets a title from an element inside each panel to use as the panel navigation link. Set this option to 'number' if you would like to simply have the number of the panel used instead, as in <a href="#demos">demo #2</a>. If you simply wish to turn off the panel navigation, use the </em>panelNav<em> option.</em></p>
+	</li>
+	
+	<li>
+		<p>panelTitle: <strong>'h4'</strong> / 'any tag type'<br />
+		<em>Inside the divs in my examples, there are h4 elements that serve as panel titles. These can be whatever elements you want, though, and you can specify what tag you want to be used here. <strong>Important note:</strong> Sometimes you may wish the title used in the panel navigation to be shorter than the title in the panel itself. Just add a title attribute to your element and the panel navigation will use the title attribute instead of the full text as its panel navigation text.</em></p>
+	</li>
+	
+	<li>
+		<p>randomStart: <strong>true</strong> / false<br />
+		<em>By default, the carousel starts with a random panel so that the carousel does not always begin on the same item. You may turn it off with this option, after which it will always begin with the first panel.</em></p>
+	</li>
+	
+	<li>
+		<p>relativeNav: <strong>true</strong> / false<br />
+		<em>Use this option to turn off the back / forward navigation.</em></p>
+	</li>
+	
+	<li>
+		<p>relativeNavButtons: <strong>['Back', 'Forward']</strong> / ['text or html for back button', 'text or html for forward button']<br />
+		<em>By default, the text 'Back' and 'Forward' is used for the respective relative navigation, but you can make this anything else you want, even images as in <a href="#demos">demo #1</a> or, conceivably, any other HTML.</em></p>
+	</li>
+	
+	<li>
+		<p>relativeNavCustomButtons: <strong>[null, null]</strong> / ['id, class, or tag for back button', 'id, class, or tag for forward button']<br />
+		<em>So maybe you don't want to use my panel navigation. That's fine. I understand. Really. So you can turn off my nav (panelNav: false) and tell the carousel to use your elements. Just put the id, class, or tag in quotes in this array, as such: ['#myBackButton', '#myForwardButton']</em></p>
+	</li>
+</ul>
+		
+
+
+<hr />
+
+<p>This documentation is a first draft. Please let me know how it can be improved, or if you have any questions.</p>
+
+<p><a href="mailto:naeagle@pbs.org">Nate Eagle</a></p>
+
+</div><!-- end #carouselDocumentation -->
+
+</body>
+</html>

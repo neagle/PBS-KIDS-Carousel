@@ -1,0 +1,72 @@
+html, body { margin: 0; padding: 0; }
+
+body { background: #333; color: #333; }
+
+a img { border: 0; }
+
+h2 {
+	border-top: 5px solid #333;
+	padding-top: 5px;
+}
+
+#carouselDocumentation {
+	background: #fff;
+	font-family: Arial, sans-serif;
+	margin: 0 auto;
+	padding: 1em 2em;
+	width: 600px;
+}
+
+
+/* Padding applied here will not work the way you want -- apply this padding to the .panel class instead. */
+#myCarousel1, #myCarousel2, #myCarousel3 {
+	border: 5px double #ccc;
+	margin-bottom: 1em;
+	/* If you'd like to only display one item when javascript is not enabled, manually set the height and overflow as below:
+	height: 120px !important;
+	overflow: hidden; */
+	xpadding: 20px;
+}
+
+.kidsCarouselStrip {
+	xborder: 1px solid blue;
+}
+
+#myCarousel1 .panel, #myCarousel2 .panel, #myCarousel3 .panel {
+	xbackground: #ccc;
+	xborder: 10px solid red;
+	xmargin: 20px;
+	padding: 20px;
+}
+
+#myCarousel1 .panel p, #myCarousel2 .panel p, #myCarousel3 .panel p {
+	margin: 0;
+	padding: 0;
+}
+
+#myCarousel1 .panel h4, #myCarousel2 .panel h4, #myCarousel3 .panel h4 { margin: 0 0 1em; }
+
+/* Styling for navigation bar -- all customizable */
+.kidsCarouselNavigation {
+	background: #333;
+	xborder: 1px solid red;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	xmargin: 10px;
+	opacity: .5;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+	xpadding: 10px;
+}
+
+.kidsCarouselNavigation a {
+	color: #fff;
+	outline: none;
+	padding: 10px;
+	text-decoration: none;
+}
+
+#myCarousel1 .kidsCarouselNavigation .back, #myCarousel1 .kidsCarouselNavigation .forward { padding: 9px 10px 5px; }
+
+.kidsCarouselNavigation .forward { float: right !important; }
+
+.kidsCarouselNavigation a.current { background: #666; }
